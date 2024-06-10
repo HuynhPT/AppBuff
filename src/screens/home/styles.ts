@@ -27,9 +27,11 @@ export const styles = StyleSheet.create({
     textItemCard:{
         fontSize:15,
         fontWeight:'500',
+        color:'black'
     },
     textMoney:{
         fontSize:14,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        color:'red'
     }
 })

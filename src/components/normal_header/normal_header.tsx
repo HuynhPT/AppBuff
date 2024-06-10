@@ -3,8 +3,9 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 type Props = {
-  onBack: () => void;
+  navigation: any;
   title: string;
+  trailing?: any;
 };
 
 const NormalHeader = (props: Props) => {
@@ -15,16 +16,20 @@ const NormalHeader = (props: Props) => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: 24,
+          paddingTop: 18,
           paddingHorizontal: 12,
         }}>
-        <TouchableOpacity onPress={props.onBack} style={{flex: 1}}>
+        <TouchableOpacity
+          onPress={() => props.navigation.goBack()}
+          style={{flex: 1}}>
           <Icon name="arrow-back" size={24} color={'black'} />
         </TouchableOpacity>
         <Text style={{fontSize: 16, fontWeight: '600', color: 'black'}}>
           {props.title}
         </Text>
-        <View style={{flex: 1}} />
+        <View style={{flex: 1, alignItems:'flex-end'}}>
+          {props.trailing != undefined ? props.trailing : null}
+        </View>
       </View>
     </View>
   );

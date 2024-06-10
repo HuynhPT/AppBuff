@@ -10,7 +10,7 @@ const HistoryPaymentScreens = (props: Props) => {
   return (
     <View style={{flex: 1}}>
       <NormalHeader
-        onBack={() => props.navigation.goBack()}
+        navigation={props.navigation}
         title="Lịch sử giao dịch"
       />
       <Text>HistoryPaymentScreens</Text>

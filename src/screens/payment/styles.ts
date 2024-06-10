@@ -7,5 +7,12 @@ export const styles = StyleSheet.create({
         color:'blue',
         lineHeight:24,
         letterSpacing:1
+    },
+    textSTK: {
+        fontSize: 14,
+        fontWeight: '500',
+        color: 'black',
+        lineHeight: 24,
+        letterSpacing: 1
     }
 })

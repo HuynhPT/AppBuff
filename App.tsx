@@ -9,6 +9,8 @@ import RegisterScreens from './src/screens/auth/register/register';
 import ForgotScreens from './src/screens/auth/forgot/forgot';
 import PaymentScreens from './src/screens/payment/payment';
 import HistoryPaymentScreens from './src/screens/payment/history/history';
+import ProfileScreens from './src/screens/profile/profile';
+import CartScreens from './src/screens/cart/cart';
 export enum routerName {
   splash = 'splash',
   auth = 'auth',
@@ -18,6 +20,8 @@ export enum routerName {
   register = 'register',
   payment = 'payment',
   historyPayment = 'historyPayment',
+  profile = 'profile',
+  cart = 'cart',
 }
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -33,7 +37,13 @@ const App = () => {
 
         <Stack.Screen name={routerName.home} component={HomeScreens} />
         <Stack.Screen name={routerName.payment} component={PaymentScreens} />
-        <Stack.Screen name={routerName.historyPayment} component={HistoryPaymentScreens} />
+        <Stack.Screen
+          name={routerName.historyPayment}
+          component={HistoryPaymentScreens}
+        />
+
+        <Stack.Screen name={routerName.cart} component={CartScreens} />
+        <Stack.Screen name={routerName.profile} component={ProfileScreens} />
       </Stack.Navigator>
     </NavigationContainer>
   );

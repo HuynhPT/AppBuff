@@ -30,7 +30,7 @@ const PaymentScreens = (props: Props) => {
           </Text>
           <TouchableOpacity
             onPress={() => props.navigation.navigate(routerName.historyPayment)}
-            style={{flex: 1,alignItems:'flex-end'}}>
+            style={{flex: 1, alignItems: 'flex-end'}}>
             <Icon name="hourglass" size={24} color={'black'} />
           </TouchableOpacity>
         </View>
@@ -89,25 +89,25 @@ const PaymentScreens = (props: Props) => {
               alignItems: 'center',
             }}>
             <Image
-              source={require('../../assets/image/qr_code.png')}
+              source={require('../../assets/image/qr_code.jpg')}
               style={{width: 200, height: 200}}
               resizeMode="center"
             />
-            <Text>
+            <Text style={styles.textSTK}>
               Số tài khoản
-              <Text>: 0358761441</Text>
+              <Text style={styles.textSTK}>: 19070192530015</Text>
             </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Chủ tài khoản
-              <Text>: DO DANG HUYNH</Text>
+              <Text style={styles.textSTK}>: DO DANG HUYNH</Text>
             </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Ngân hàng
-              <Text>: TPBank</Text>
+              <Text style={styles.textSTK}>: Techcombank</Text>
             </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Nội dung nạp
-              <Text>: NAP _ Số điện thoại</Text>
+              <Text style={styles.textSTK}>: NAP _ Số điện thoại</Text>
             </Text>
           </View>
 
@@ -139,21 +139,17 @@ const PaymentScreens = (props: Props) => {
               style={{width: 200, height: 200}}
               resizeMode="center"
             />
-            <Text>
-              Số tài khoản
-              <Text>: 0358761441</Text>
-            </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Chủ tài khoản
-              <Text>: DO DANG HUYNH</Text>
+              <Text style={styles.textSTK}>: DO DANG HUYNH</Text>
             </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Ví điện tử
-              <Text>: Momo</Text>
+              <Text style={styles.textSTK}>: Momo</Text>
             </Text>
-            <Text>
+            <Text style={styles.textSTK}>
               Nội dung nạp
-              <Text>: NAP _ Số điện thoại</Text>
+              <Text style={styles.textSTK}>: NAP _ Số điện thoại</Text>
             </Text>
           </View>
         </ScrollView>

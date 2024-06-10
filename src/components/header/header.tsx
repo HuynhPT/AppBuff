@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 type Props = {
   onPayment: () => void;
+  onProfile: () => void;
+  onCart: () => void;
 };
 
 const HeaderAppbar = (props: Props) => {
@@ -27,7 +29,7 @@ const HeaderAppbar = (props: Props) => {
           style={{width: 150, height: 150}}
         />
       </View>
-      <Text>Xin chào: Nguyen Van A</Text>
+      <Text style={{color:'black'}}>Xin chào: Nguyen Van A</Text>
       <View
         style={{
           flexDirection: 'row',
@@ -35,7 +37,7 @@ const HeaderAppbar = (props: Props) => {
           justifyContent: 'center',
           flex: 1,
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props.onCart}>
           <Icon
             name="cart-outline"
             size={24}
@@ -51,7 +53,7 @@ const HeaderAppbar = (props: Props) => {
             style={{marginHorizontal: 8}}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props.onProfile}>
           <Icon
             name="person-circle-outline"
             size={24}
